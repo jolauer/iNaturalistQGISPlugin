@@ -1,0 +1,53 @@
+[general]
+name=iNaturalist Explorer
+qgisMinimumVersion=3.16
+qgisMaximumVersion=3.99
+description=Load, filter and visualize iNaturalist biodiversity observations directly in QGIS
+version=1.0.0
+author=iNaturalist Explorer Contributors
+email=contact@example.com
+
+about=iNaturalist Explorer connects QGIS to the iNaturalist citizen science platform (inaturalist.org) and lets you explore biodiversity observations as interactive map layers.
+
+    FEATURES:
+    - Query observations by canvas extent or custom bounding box
+    - Optional OAuth2 login for higher rate limits and private observations
+    - Filter by taxon group (plants, birds, insects, fungi, ...)
+    - Search for specific species via the iNaturalist taxonomy API
+    - Filter by observer, identifier, date range, quality grade and media
+    - Categorized layer style -- color-coded by iconic taxon group
+    - Rich attribute table: scientific name, common name, date, user, photo URL, ...
+    - Summary statistics after each query (taxa breakdown, top observers)
+
+    REQUIREMENTS:
+    - QGIS 3.16 or later
+    - Internet connection
+    - Optional: iNaturalist account + OAuth2 app for authenticated access
+
+    OAUTH SETUP (optional):
+    Register a free OAuth app at https://www.inaturalist.org/oauth/applications
+    Use redirect URI: urn:ietf:wg:oauth:2.0:oob
+    Then enter App ID, App Secret and your credentials in the Login tab.
+    Anonymous queries work without any account.
+
+tracker=https://github.com/your-username/qgis-inaturalist-explorer/issues
+repository=https://github.com/your-username/qgis-inaturalist-explorer
+homepage=https://www.inaturalist.org
+
+hasProcessingProvider=no
+tags=inaturalist,biodiversity,species,observations,nature,citizen science,biology,ecology,birds,plants,animals,occurrence
+category=Web
+icon=icon.png
+
+experimental=False
+deprecated=False
+
+changelog=
+    1.0.0 (2026-02-23)
+    - Initial release
+    - OAuth2 login support
+    - BBox and canvas-extent queries
+    - Filters: taxon group, species search, observer, identifier, date, quality, captive/wild, media
+    - Categorized layer style by iconic taxon
+    - Background thread fetching with progress bar
+    - Result summary panel
